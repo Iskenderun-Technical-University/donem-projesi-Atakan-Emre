@@ -36,4 +36,4 @@ Bu proje MIT lisansı altında lisanslanmıştır. Daha fazla bilgi için `LICEN
 
 ## İletişim
 
-- Sahin Atakan Emre - 222523302 - [sahinemre.mdbf22@iste.edu.tr](mailto:sahinemre.mdbf22@iste.edu.tr
+- Sahin Atakan Emre - 222523302 - [sahinemre.mdbf22@iste.edu.tr](mailto:sahinemre.mdbf22@iste.edu.tr]
