@@ -20,7 +20,7 @@ Bu proje için aşağıdaki gereksinimlere ihtiyaç duyulmaktadır:
 
 ## Kurulum
 
-1. Bu GitHub deposunu klonlayın: `git clone https://github.com/sahinatakamre/hastane-otomasyon-sistemi.git`
+1. Bu GitHub deposunu klonlayın: `git clone https://github.com/Iskenderun-Technical-University/donem-projesi-Atakan-Emre.git`
 2. Visual Studio'da `HastaneOtomasyonu.sln` dosyasını açın.
 3. Proje içindeki `HastaneOtomasyonu.bak` dosyasını SQL Server'a geri yükleyin.
 4. `Web.config` dosyasını açın ve `connectionString` bölümünü kendi veritabanı bağlantı bilgilerinizle güncelleyin.
