@@ -10,6 +10,20 @@ Bu proje C# programlama dili kullanarak bir hastane otomasyon sistemi oluşturma
 - Tıbbi personelin hasta kayıtlarını görüntüleme ve güncelleme yeteneği
 - Hastaların tıbbi geçmişlerini görüntüleme
 
+## Sorular
+
+- Soru: Motivasyonunuz (Neden böyle bir proje yapmak istiyorsunuz)?
+
+- Cevap: Bu proje, sağlık sektöründe daha verimli bir yönetim sağlamayı amaçlayan bir hastane otomasyon sistemi geliştirmek için yapılmaktadır. Projenin temel motivasyonu, hastaların, doktorların ve diğer tıbbi personelin verilerinin kolayca yönetilebilmesini ve hastaların sağlık hizmetlerine daha hızlı ve kolay erişim sağlamasını sağlamaktır. Bu proje, hastane otomasyon sistemlerinin nasıl çalıştığını anlamak ve benzer uygulamalar geliştirmek için iyi bir örnek oluşturacaktır.
+
+- Soru: Amacınız (Proje sonunda ortaya çıkan yazılımın ne gibi özellikleri olacak)?
+
+- Cevap: Bu proje sonunda ortaya çıkan yazılım, hastanelerdeki verilerin yönetimi için bir arayüz sağlayan bir hastane otomasyon sistemi olacaktır. Yazılımın temel özellikleri, hastaların kayıt oluşturma, randevu alma, randevu iptali, doktorların hasta kayıtlarını güncelleme ve tıbbi personelin hasta kayıtlarını görüntüleme olacaktır. Bu yazılım ayrıca, doktorların, tıbbi personelin ve hastaların farklı yetkilere sahip olabileceği bir rol tabanlı yetkilendirme sistemi de içerecektir.
+
+- Soru: Projenizde kullanacağınız muhtemel veritabanı tabloları neler olacaktır?
+
+- Cevap: Bu projede kullanılacak veritabanı tabloları, hastaların, doktorların, randevuların ve tıbbi kayıtların bilgilerini tutacak şekilde tasarlanacaktır. Hastane otomasyon sistemi için muhtemel tablolar arasında "Hasta", "Doktor", "Randevu" ve "Tıbbi Kayıt" tabloları yer alacaktır. Bu tabloların sütunları, ilgili verilerin yönetimi ve işlenmesi için gerekli olan bilgileri içerecektir. Örneğin, "Hasta" tablosu, hastaların adı, soyadı, doğum tarihi, telefon numarası, adresi gibi bilgileri içerebilir. "Doktor" tablosu, doktorların adı, soyadı, uzmanlık alanı, çalıştığı bölüm gibi bilgileri içerebilir. "Randevu" tablosu, randevu tarihi, saati, doktorun adı, hastanın adı gibi bilgileri içerebilir. "Tıbbi Kayıt" tablosu ise hastaların tıbbi geçmişi, tedavi geçmişi, ilaç kullanım
+
 ## Gereksinimler
 
 Bu proje için aşağıdaki gereksinimlere ihtiyaç duyulmaktadır:
