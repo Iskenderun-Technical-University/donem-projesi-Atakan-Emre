@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Proje_Hastane
 {
-    public partial class FrmDoktorGiris : Form
+    public partial class FrmDoktorDetay : Form
     {
-        public FrmDoktorGiris()
+        public FrmDoktorDetay()
         {
             InitializeComponent();
-        }
-
-        private void FrmDoktorGiris_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
