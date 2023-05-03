@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace Proje_Hastane
 {
-    public partial class FrmGirisler : Form
+    public partial class FrmDoktorGiris : Form
     {
-        public FrmGirisler()
+        public FrmDoktorGiris()
         {
             InitializeComponent();
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FrmGirisler_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
