@@ -84,7 +84,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Corbel", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(338, 371);
+            this.label2.Location = new System.Drawing.Point(343, 371);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(76, 26);
             this.label2.TabIndex = 4;
@@ -94,7 +94,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Corbel", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(552, 371);
+            this.label3.Location = new System.Drawing.Point(558, 371);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(90, 26);
             this.label3.TabIndex = 5;
@@ -128,7 +128,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(786, 445);
+            this.ClientSize = new System.Drawing.Size(766, 445);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
