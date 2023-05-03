@@ -1,0 +1,11 @@
+F:\deneme\proje\Proje_Hastane\bin\Debug\Proje_Hastane.exe.config
+F:\deneme\proje\Proje_Hastane\bin\Debug\Proje_Hastane.exe
+F:\deneme\proje\Proje_Hastane\bin\Debug\Proje_Hastane.pdb
+F:\deneme\proje\Proje_Hastane\obj\Debug\Proje_Hastane.csproj.AssemblyReference.cache
+F:\deneme\proje\Proje_Hastane\obj\Debug\Proje_Hastane.csproj.SuggestedBindingRedirects.cache
+F:\deneme\proje\Proje_Hastane\obj\Debug\Proje_Hastane.Form1.resources
+F:\deneme\proje\Proje_Hastane\obj\Debug\Proje_Hastane.Properties.Resources.resources
+F:\deneme\proje\Proje_Hastane\obj\Debug\Proje_Hastane.csproj.GenerateResource.cache
+F:\deneme\proje\Proje_Hastane\obj\Debug\Proje_Hastane.csproj.CoreCompileInputs.cache
+F:\deneme\proje\Proje_Hastane\obj\Debug\Proje_Hastane.exe
+F:\deneme\proje\Proje_Hastane\obj\Debug\Proje_Hastane.pdb
