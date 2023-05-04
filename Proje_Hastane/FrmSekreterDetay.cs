@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Proje_Hastane
 {
-    public partial class FrmDoktorBilgiDuzenle : Form
+    public partial class FrmSekreterDetay : Form
     {
-        public FrmDoktorBilgiDuzenle()
+        public FrmSekreterDetay()
         {
             InitializeComponent();
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
