@@ -143,6 +143,7 @@
             this.MaximizeBox = false;
             this.Name = "FrmHastaGiris";
             this.Text = "Hasta Girişi";
+            this.Load += new System.EventHandler(this.FrmHastaGiris_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

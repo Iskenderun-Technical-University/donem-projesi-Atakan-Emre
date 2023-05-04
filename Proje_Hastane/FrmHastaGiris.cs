@@ -42,6 +42,7 @@ namespace Proje_Hastane
             if(dr.Read())
             {
                 FrmHastaDetay fr = new FrmHastaDetay();
+                fr.tcno = MskTC.Text;
                 fr.Show();
                 this.Hide();
 
@@ -51,6 +52,11 @@ namespace Proje_Hastane
             }
 
             bgl.baglanti().Close();
+        }
+
+        private void FrmHastaGiris_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

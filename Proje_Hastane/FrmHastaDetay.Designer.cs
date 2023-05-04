@@ -29,29 +29,29 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.tc = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.LblAdSıyad = new System.Windows.Forms.Label();
             this.LblTC = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tc = new System.Windows.Forms.Label();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.CmbDoktor = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.RchSikayet = new System.Windows.Forms.RichTextBox();
+            this.LnkBilgiDuzenle = new System.Windows.Forms.LinkLabel();
             this.BtnRandevuAl = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.CmbDoktor = new System.Windows.Forms.ComboBox();
+            this.RchSikayet = new System.Windows.Forms.RichTextBox();
             this.CmbBrans = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.LnkBilgiDuzenle = new System.Windows.Forms.LinkLabel();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,32 +62,13 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.tc);
             this.groupBox1.Location = new System.Drawing.Point(14, 14);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox1.Size = new System.Drawing.Size(344, 210);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Kişi Bilgi";
-            // 
-            // tc
-            // 
-            this.tc.AutoSize = true;
-            this.tc.Location = new System.Drawing.Point(49, 69);
-            this.tc.Name = "tc";
-            this.tc.Size = new System.Drawing.Size(68, 23);
-            this.tc.TabIndex = 0;
-            this.tc.Text = "TC NO:";
-            this.tc.Click += new System.EventHandler(this.tc_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(28, 117);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 23);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Ad Soyad:";
             // 
             // LblAdSıyad
             // 
@@ -107,6 +88,25 @@
             this.LblTC.TabIndex = 3;
             this.LblTC.Text = "00000000000";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(28, 117);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(89, 23);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Ad Soyad:";
+            // 
+            // tc
+            // 
+            this.tc.AutoSize = true;
+            this.tc.Location = new System.Drawing.Point(49, 69);
+            this.tc.Name = "tc";
+            this.tc.Size = new System.Drawing.Size(68, 23);
+            this.tc.TabIndex = 0;
+            this.tc.Text = "TC NO:";
+            this.tc.Click += new System.EventHandler(this.tc_Click);
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.LnkBilgiDuzenle);
@@ -125,30 +125,15 @@
             this.groupBox2.Text = "Randevu Paneli";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
-            // CmbDoktor
+            // LnkBilgiDuzenle
             // 
-            this.CmbDoktor.FormattingEnabled = true;
-            this.CmbDoktor.Location = new System.Drawing.Point(118, 72);
-            this.CmbDoktor.Name = "CmbDoktor";
-            this.CmbDoktor.Size = new System.Drawing.Size(200, 31);
-            this.CmbDoktor.TabIndex = 0;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(49, 37);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 23);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Branş:";
-            // 
-            // RchSikayet
-            // 
-            this.RchSikayet.Location = new System.Drawing.Point(118, 122);
-            this.RchSikayet.Name = "RchSikayet";
-            this.RchSikayet.Size = new System.Drawing.Size(200, 115);
-            this.RchSikayet.TabIndex = 3;
-            this.RchSikayet.Text = "";
+            this.LnkBilgiDuzenle.AutoSize = true;
+            this.LnkBilgiDuzenle.Location = new System.Drawing.Point(6, 290);
+            this.LnkBilgiDuzenle.Name = "LnkBilgiDuzenle";
+            this.LnkBilgiDuzenle.Size = new System.Drawing.Size(147, 23);
+            this.LnkBilgiDuzenle.TabIndex = 8;
+            this.LnkBilgiDuzenle.TabStop = true;
+            this.LnkBilgiDuzenle.Text = "Bilgilerini Düzenle";
             // 
             // BtnRandevuAl
             // 
@@ -177,13 +162,38 @@
             this.label6.TabIndex = 6;
             this.label6.Text = "Şikayet:";
             // 
+            // CmbDoktor
+            // 
+            this.CmbDoktor.FormattingEnabled = true;
+            this.CmbDoktor.Location = new System.Drawing.Point(118, 72);
+            this.CmbDoktor.Name = "CmbDoktor";
+            this.CmbDoktor.Size = new System.Drawing.Size(200, 31);
+            this.CmbDoktor.TabIndex = 2;
+            // 
+            // RchSikayet
+            // 
+            this.RchSikayet.Location = new System.Drawing.Point(118, 122);
+            this.RchSikayet.Name = "RchSikayet";
+            this.RchSikayet.Size = new System.Drawing.Size(200, 115);
+            this.RchSikayet.TabIndex = 3;
+            this.RchSikayet.Text = "";
+            // 
             // CmbBrans
             // 
             this.CmbBrans.FormattingEnabled = true;
             this.CmbBrans.Location = new System.Drawing.Point(118, 29);
             this.CmbBrans.Name = "CmbBrans";
             this.CmbBrans.Size = new System.Drawing.Size(200, 31);
-            this.CmbBrans.TabIndex = 7;
+            this.CmbBrans.TabIndex = 1;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(49, 37);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(59, 23);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Branş:";
             // 
             // groupBox3
             // 
@@ -195,6 +205,15 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Randevu Geçmişi";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 27);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(430, 227);
+            this.dataGridView1.TabIndex = 0;
+            // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.dataGridView2);
@@ -205,15 +224,6 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Aktif Randevular";
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 27);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(430, 227);
-            this.dataGridView1.TabIndex = 0;
-            // 
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -222,16 +232,6 @@
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(430, 241);
             this.dataGridView2.TabIndex = 1;
-            // 
-            // LnkBilgiDuzenle
-            // 
-            this.LnkBilgiDuzenle.AutoSize = true;
-            this.LnkBilgiDuzenle.Location = new System.Drawing.Point(6, 290);
-            this.LnkBilgiDuzenle.Name = "LnkBilgiDuzenle";
-            this.LnkBilgiDuzenle.Size = new System.Drawing.Size(147, 23);
-            this.LnkBilgiDuzenle.TabIndex = 8;
-            this.LnkBilgiDuzenle.TabStop = true;
-            this.LnkBilgiDuzenle.Text = "Bilgilerini Düzenle";
             // 
             // FrmHastaDetay
             // 
@@ -243,16 +243,17 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmHastaDetay";
             this.Text = "Hasta Detay";
+            this.Load += new System.EventHandler(this.FrmHastaDetay_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
