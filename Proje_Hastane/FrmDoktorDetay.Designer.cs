@@ -34,14 +34,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tc = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.RcSikayet = new System.Windows.Forms.RichTextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.RcSikayet = new System.Windows.Forms.RichTextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.BtnGuncelle = new System.Windows.Forms.Button();
-            this.BtnDuyurlar = new System.Windows.Forms.Button();
             this.BtnCıkıs = new System.Windows.Forms.Button();
-            this.BtnInternet = new System.Windows.Forms.Button();
+            this.BtnDuyurlar = new System.Windows.Forms.Button();
+            this.BtnGuncelle = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -108,12 +107,20 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Randevu Detay";
             // 
+            // RcSikayet
+            // 
+            this.RcSikayet.Location = new System.Drawing.Point(10, 30);
+            this.RcSikayet.Name = "RcSikayet";
+            this.RcSikayet.Size = new System.Drawing.Size(289, 96);
+            this.RcSikayet.TabIndex = 9;
+            this.RcSikayet.Text = "";
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.dataGridView1);
             this.groupBox3.Location = new System.Drawing.Point(353, 25);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(593, 427);
+            this.groupBox3.Size = new System.Drawing.Size(593, 477);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Randevu Listesi";
@@ -124,38 +131,29 @@
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 27);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(587, 397);
+            this.dataGridView1.Size = new System.Drawing.Size(587, 447);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // RcSikayet
-            // 
-            this.RcSikayet.Location = new System.Drawing.Point(10, 30);
-            this.RcSikayet.Name = "RcSikayet";
-            this.RcSikayet.Size = new System.Drawing.Size(289, 96);
-            this.RcSikayet.TabIndex = 9;
-            this.RcSikayet.Text = "";
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.BtnInternet);
             this.groupBox4.Controls.Add(this.BtnCıkıs);
             this.groupBox4.Controls.Add(this.BtnDuyurlar);
             this.groupBox4.Controls.Add(this.BtnGuncelle);
             this.groupBox4.Location = new System.Drawing.Point(26, 372);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(305, 153);
+            this.groupBox4.Size = new System.Drawing.Size(305, 130);
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "groupBox4";
+            this.groupBox4.Text = "Hızlı Erişim";
             // 
-            // BtnGuncelle
+            // BtnCıkıs
             // 
-            this.BtnGuncelle.Location = new System.Drawing.Point(10, 30);
-            this.BtnGuncelle.Name = "BtnGuncelle";
-            this.BtnGuncelle.Size = new System.Drawing.Size(134, 35);
-            this.BtnGuncelle.TabIndex = 0;
-            this.BtnGuncelle.Text = "Bilgi Düzenle";
-            this.BtnGuncelle.UseVisualStyleBackColor = true;
+            this.BtnCıkıs.Location = new System.Drawing.Point(10, 80);
+            this.BtnCıkıs.Name = "BtnCıkıs";
+            this.BtnCıkıs.Size = new System.Drawing.Size(274, 35);
+            this.BtnCıkıs.TabIndex = 2;
+            this.BtnCıkıs.Text = "Çıkış";
+            this.BtnCıkıs.UseVisualStyleBackColor = true;
             // 
             // BtnDuyurlar
             // 
@@ -166,23 +164,14 @@
             this.BtnDuyurlar.Text = "Duyurular";
             this.BtnDuyurlar.UseVisualStyleBackColor = true;
             // 
-            // BtnCıkıs
+            // BtnGuncelle
             // 
-            this.BtnCıkıs.Location = new System.Drawing.Point(150, 80);
-            this.BtnCıkıs.Name = "BtnCıkıs";
-            this.BtnCıkıs.Size = new System.Drawing.Size(134, 35);
-            this.BtnCıkıs.TabIndex = 2;
-            this.BtnCıkıs.Text = "Çıkış";
-            this.BtnCıkıs.UseVisualStyleBackColor = true;
-            // 
-            // BtnInternet
-            // 
-            this.BtnInternet.Location = new System.Drawing.Point(6, 80);
-            this.BtnInternet.Name = "BtnInternet";
-            this.BtnInternet.Size = new System.Drawing.Size(134, 35);
-            this.BtnInternet.TabIndex = 3;
-            this.BtnInternet.Text = "İnternet";
-            this.BtnInternet.UseVisualStyleBackColor = true;
+            this.BtnGuncelle.Location = new System.Drawing.Point(10, 30);
+            this.BtnGuncelle.Name = "BtnGuncelle";
+            this.BtnGuncelle.Size = new System.Drawing.Size(134, 35);
+            this.BtnGuncelle.TabIndex = 0;
+            this.BtnGuncelle.Text = "Bilgi Düzenle";
+            this.BtnGuncelle.UseVisualStyleBackColor = true;
             // 
             // FrmDoktorDetay
             // 
@@ -194,7 +183,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmDoktorDetay";
             this.Text = "FrmDoktorDetay";
             this.groupBox1.ResumeLayout(false);
@@ -219,7 +208,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.RichTextBox RcSikayet;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Button BtnInternet;
         private System.Windows.Forms.Button BtnCıkıs;
         private System.Windows.Forms.Button BtnDuyurlar;
         private System.Windows.Forms.Button BtnGuncelle;
