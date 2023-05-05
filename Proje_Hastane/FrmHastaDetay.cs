@@ -61,16 +61,39 @@ namespace Proje_Hastane
 
         private void CmbBrans_SelectedIndexChanged(object sender, EventArgs e)
         {
+
             CmbDoktor.Items.Clear();
             SqlCommand komut3 = new SqlCommand("Select DoktorAd,DoktorSoyad From Tbl_Doktorlar where DoktorBrans = @p1",bgl.baglanti());
             komut3.Parameters.AddWithValue("@p1",CmbBrans.Text);
             SqlDataReader dr3 = komut3.ExecuteReader();
+
+            /*
             while (dr3.Read())
             {
                 CmbDoktor.Items.Add(dr3[0] + " " + dr3[1]);
 
             }
             bgl.baglanti().Close();
+
+            if (CmbDoktor.Items.Count > 0)
+            {
+                CmbDoktor.SelectedIndex = 0;
+            }
+            */
+
+            if (dr3.HasRows) // Satır sayısı 0'dan büyük ise
+            {
+                while (dr3.Read())
+                {
+                    CmbDoktor.Items.Add(dr3[0] + " " + dr3[1]);
+                }
+                CmbDoktor.SelectedIndex = 0;
+            }
+            else // Satır sayısı 0 ise
+            {
+                MessageBox.Show("Bu branşta henüz doktor eklenmemiş!");
+                CmbDoktor.Text = "";
+            }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
