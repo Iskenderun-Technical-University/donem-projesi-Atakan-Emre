@@ -49,6 +49,7 @@ namespace Proje_Hastane
             komut2.Parameters.AddWithValue("@p6", MskTC.Text);
             komut2.ExecuteNonQuery();
             bgl.baglanti().Close();
+            //Tamam'a basınca form otomatik kapanır
             DialogResult result = MessageBox.Show("Bilgileriniz Güncellendi. Ana menüye dönmek için OK'a tıklayın.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             if (result == DialogResult.OK)
