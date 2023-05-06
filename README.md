@@ -1,4 +1,4 @@
-# Hastane Otomasyon Sistemi
+# Hastane Otomasyon Sistemi - Sahin Atakan Emre - 222523302 - [sahinemre.mdbf22@iste.edu.tr](mailto:sahinemre.mdbf22@iste.edu.tr)
 
 Bu proje C# programlama dili kullanarak bir hastane otomasyon sistemi oluşturmayı amaçlar. Projenin amacı, hastaların randevu alması, doktorların ve tıbbi personelin hasta kayıtlarını güncellemesi ve hastaların tıbbi geçmişlerini yönetmesi için bir arayüz sağlamaktır.
 
