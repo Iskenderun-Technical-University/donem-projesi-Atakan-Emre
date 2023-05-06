@@ -40,7 +40,7 @@ namespace Proje_Hastane
 
         private void BtnBilgiGuncelle_Click(object sender, EventArgs e)
         {
-            SqlCommand komut2 = new SqlCommand("update Tbl_Hastalar set HastaAd=@p1,HastaSoyad=@p2,HastaTelefon=@p4,HastaCinsiyet=@p5 where HastaTc=@p6",bgl.baglanti()); 
+            SqlCommand komut2 = new SqlCommand("update Tbl_Hastalar set HastaAd=@p1,HastaSoyad=@p2,HastaTelefon=@p3,HastaSifre=@p4,HastaCinsiyet=@p5 where HastaTc=@p6",bgl.baglanti()); 
             komut2.Parameters.AddWithValue("@p1", TxtAd.Text);
             komut2.Parameters.AddWithValue("@p2", TxtSoyad.Text);
             komut2.Parameters.AddWithValue("@p3", MskTelefon.Text);
@@ -49,7 +49,12 @@ namespace Proje_Hastane
             komut2.Parameters.AddWithValue("@p6", MskTC.Text);
             komut2.ExecuteNonQuery();
             bgl.baglanti().Close();
-            MessageBox.Show("Bilgileriniz Güncellendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            DialogResult result = MessageBox.Show("Bilgileriniz Güncellendi. Ana menüye dönmek için OK'a tıklayın.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            if (result == DialogResult.OK)
+            {
+                this.Close(); // Form kapatılır
+            }
 
         }
     }
