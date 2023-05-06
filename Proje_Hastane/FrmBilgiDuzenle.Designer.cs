@@ -46,12 +46,14 @@
             // 
             // BtnBilgiGuncelle
             // 
+            this.BtnBilgiGuncelle.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BtnBilgiGuncelle.Location = new System.Drawing.Point(142, 321);
             this.BtnBilgiGuncelle.Name = "BtnBilgiGuncelle";
             this.BtnBilgiGuncelle.Size = new System.Drawing.Size(175, 47);
             this.BtnBilgiGuncelle.TabIndex = 7;
             this.BtnBilgiGuncelle.Text = "Güncelle";
             this.BtnBilgiGuncelle.UseVisualStyleBackColor = true;
+            this.BtnBilgiGuncelle.Click += new System.EventHandler(this.BtnBilgiGuncelle_Click);
             // 
             // CmbCinsiyet
             // 
@@ -183,7 +185,7 @@
             this.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5);
-            this.MinimizeBox = false;
+            this.MaximizeBox = false;
             this.Name = "FrmBilgiDuzenle";
             this.Text = "Bilgi Düzenle";
             this.Load += new System.EventHandler(this.FrmBilgiDuzenle_Load);
