@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.Xml.Linq;
 
 namespace Proje_Hastane
 {
@@ -15,6 +17,40 @@ namespace Proje_Hastane
         public FrmDoktorDetay()
         {
             InitializeComponent();
+        }
+        sqlbaglantisi bgl = new sqlbaglantisi();
+        public string DoktorTC;
+        private void FrmDoktorDetay_Load(object sender, EventArgs e)
+        {
+            LblTC.Text = DoktorTC;
+
+            //Doktor Ad Soyad
+            SqlCommand komut = new SqlCommand("Select DoktorAd,DoktorSoyad From Tbl_Doktorlar Where DoktorTc=@p1", bgl.baglanti());
+            komut.Parameters.AddWithValue("@p1",LblTC.Text);
+            SqlDataReader dr = komut.ExecuteReader();   
+            while (dr.Read())
+            {
+                LblAdSıyad.Text = dr[0]+ " " + dr[1];
+            }
+            bgl.baglanti().Close();
+
+            //Randevular
+
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter("Select * From Tbl_Randevular where RandevuDoktor='" + LblAdSıyad.Text + "'",bgl.baglanti());
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+
+
+
+
+        }
+
+        private void BtnGuncelle_Click(object sender, EventArgs e)
+        {
+            FrmDoktorBilgiDuzenle fr = new FrmDoktorBilgiDuzenle();
+            fr.DoktorBilgiTc = LblTC.Text;
+            fr.Show();
         }
     }
 }
