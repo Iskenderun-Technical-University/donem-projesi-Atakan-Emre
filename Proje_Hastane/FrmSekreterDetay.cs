@@ -107,5 +107,11 @@ namespace Proje_Hastane
             FrmBrans frm = new FrmBrans();
             frm.Show();
         }
+
+        private void BtnListe_Click(object sender, EventArgs e)
+        {
+            FrmRandevuListesi frmrandevu = new FrmRandevuListesi();
+            frmrandevu.Show();
+        }
     }
 }
