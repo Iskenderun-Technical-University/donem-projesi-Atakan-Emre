@@ -132,11 +132,11 @@
             // 
             // Txtid
             // 
+            this.Txtid.Enabled = false;
             this.Txtid.Location = new System.Drawing.Point(91, 30);
             this.Txtid.Name = "Txtid";
             this.Txtid.Size = new System.Drawing.Size(237, 31);
             this.Txtid.TabIndex = 1;
-            this.Txtid.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label2
             // 
@@ -166,6 +166,7 @@
             this.BtnRandevuAl.TabIndex = 4;
             this.BtnRandevuAl.Text = "Randevu Al";
             this.BtnRandevuAl.UseVisualStyleBackColor = true;
+            this.BtnRandevuAl.Click += new System.EventHandler(this.BtnRandevuAl_Click);
             // 
             // label5
             // 
@@ -257,6 +258,7 @@
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(737, 241);
             this.dataGridView2.TabIndex = 1;
+            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
             // 
             // FrmHastaDetay
             // 

@@ -67,19 +67,6 @@ namespace Proje_Hastane
             komut3.Parameters.AddWithValue("@p1",CmbBrans.Text);
             SqlDataReader dr3 = komut3.ExecuteReader();
 
-            /*
-            while (dr3.Read())
-            {
-                CmbDoktor.Items.Add(dr3[0] + " " + dr3[1]);
-
-            }
-            bgl.baglanti().Close();
-
-            if (CmbDoktor.Items.Count > 0)
-            {
-                CmbDoktor.SelectedIndex = 0;
-            }
-            */
 
             if (dr3.HasRows) // Satır sayısı 0'dan büyük ise
             {
@@ -94,18 +81,16 @@ namespace Proje_Hastane
                 MessageBox.Show("Bu branşta henüz doktor eklenmemiş!");
                 CmbDoktor.Text = "";
             }
+            bgl.baglanti().Close();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void CmbDoktor_SelectedIndexChanged(object sender, EventArgs e)
         {
 
             DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter("Select * From Tbl_Randevular where RandevuBrans = ' " + CmbBrans.Text + "'", bgl.baglanti());
+            SqlDataAdapter da = new SqlDataAdapter("Select * From Tbl_Randevular where RandevuBrans = '" + CmbBrans.Text + "'" + " and RandevuDoktor='" + CmbDoktor.Text + "' and RandevuDurum=0", bgl.baglanti());
             da.Fill(dt);
             dataGridView2.DataSource = dt;
         }
@@ -116,6 +101,25 @@ namespace Proje_Hastane
            fr.TCno= LblTC.Text;
             fr.Show();
 
+        }
+
+        private void BtnRandevuAl_Click(object sender, EventArgs e)
+        {
+            SqlCommand komut = new SqlCommand("Update Tbl_Randevular Set RandevuDurum=1,HastaTc=@p1,HastaSikayet=@p2 Where Randevuid=@p3",bgl.baglanti());
+            komut.Parameters.AddWithValue("@p1", LblTC.Text);
+            komut.Parameters.AddWithValue("@p2", RchSikayet.Text);
+            komut.Parameters.AddWithValue("@p3", Txtid.Text);
+            komut.ExecuteNonQuery();
+            bgl.baglanti().Close();
+            MessageBox.Show("Randevu Alındı.","Uyarı",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+
+
+        }
+
+        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int secilen = dataGridView2.SelectedCells[0].RowIndex;
+            Txtid.Text= dataGridView2.Rows[secilen].Cells[0].Value.ToString();
         }
     }
 }
