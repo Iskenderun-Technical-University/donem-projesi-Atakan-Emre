@@ -52,5 +52,22 @@ namespace Proje_Hastane
             fr.DoktorBilgiTc = LblTC.Text;
             fr.Show();
         }
+
+        private void BtnDuyurlar_Click(object sender, EventArgs e)
+        {
+            FrmDuyurular fr = new FrmDuyurular();
+            fr.Show();
+        }
+
+        private void BtnCıkıs_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int secilen = dataGridView1.SelectedCells[0].RowIndex;
+            RcSikayet.Text = dataGridView1.Rows[secilen].Cells[7].Value.ToString();
+        }
     }
 }

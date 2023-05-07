@@ -47,14 +47,14 @@
             this.TxtAd.Location = new System.Drawing.Point(138, 21);
             this.TxtAd.Name = "TxtAd";
             this.TxtAd.Size = new System.Drawing.Size(166, 31);
-            this.TxtAd.TabIndex = 33;
+            this.TxtAd.TabIndex = 1;
             // 
             // TxtSoyad
             // 
             this.TxtSoyad.Location = new System.Drawing.Point(138, 67);
             this.TxtSoyad.Name = "TxtSoyad";
             this.TxtSoyad.Size = new System.Drawing.Size(166, 31);
-            this.TxtSoyad.TabIndex = 32;
+            this.TxtSoyad.TabIndex = 2;
             // 
             // MskTC
             // 
@@ -62,7 +62,7 @@
             this.MskTC.Mask = "00000000000";
             this.MskTC.Name = "MskTC";
             this.MskTC.Size = new System.Drawing.Size(166, 31);
-            this.MskTC.TabIndex = 31;
+            this.MskTC.TabIndex = 4;
             this.MskTC.ValidatingType = typeof(int);
             // 
             // TxtSifre
@@ -70,7 +70,7 @@
             this.TxtSifre.Location = new System.Drawing.Point(138, 208);
             this.TxtSifre.Name = "TxtSifre";
             this.TxtSifre.Size = new System.Drawing.Size(166, 31);
-            this.TxtSifre.TabIndex = 30;
+            this.TxtSifre.TabIndex = 5;
             // 
             // label4
             // 
@@ -117,7 +117,7 @@
             this.CmbBrans.Location = new System.Drawing.Point(138, 113);
             this.CmbBrans.Name = "CmbBrans";
             this.CmbBrans.Size = new System.Drawing.Size(166, 31);
-            this.CmbBrans.TabIndex = 34;
+            this.CmbBrans.TabIndex = 3;
             // 
             // label3
             // 
@@ -137,9 +137,11 @@
             this.BtnBilgiGuncelle.TabIndex = 36;
             this.BtnBilgiGuncelle.Text = "Güncelle";
             this.BtnBilgiGuncelle.UseVisualStyleBackColor = true;
+            this.BtnBilgiGuncelle.Click += new System.EventHandler(this.BtnBilgiGuncelle_Click);
             // 
             // FrmDoktorBilgiDuzenle
             // 
+            this.AcceptButton = this.BtnBilgiGuncelle;
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;

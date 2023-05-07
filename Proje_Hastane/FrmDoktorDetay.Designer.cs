@@ -134,6 +134,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(837, 447);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // groupBox4
             // 
@@ -155,6 +156,7 @@
             this.BtnCıkıs.TabIndex = 2;
             this.BtnCıkıs.Text = "Çıkış";
             this.BtnCıkıs.UseVisualStyleBackColor = true;
+            this.BtnCıkıs.Click += new System.EventHandler(this.BtnCıkıs_Click);
             // 
             // BtnDuyurlar
             // 
@@ -164,6 +166,7 @@
             this.BtnDuyurlar.TabIndex = 1;
             this.BtnDuyurlar.Text = "Duyurular";
             this.BtnDuyurlar.UseVisualStyleBackColor = true;
+            this.BtnDuyurlar.Click += new System.EventHandler(this.BtnDuyurlar_Click);
             // 
             // BtnGuncelle
             // 
