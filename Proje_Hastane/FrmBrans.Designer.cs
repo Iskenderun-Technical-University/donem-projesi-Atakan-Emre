@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBrans));
             this.BtnGuncelle = new System.Windows.Forms.Button();
             this.BtnSil = new System.Windows.Forms.Button();
             this.BtnEkle = new System.Windows.Forms.Button();
@@ -65,13 +66,15 @@
             this.BtnEkle.TabIndex = 40;
             this.BtnEkle.Text = "Ekle";
             this.BtnEkle.UseVisualStyleBackColor = true;
+            this.BtnEkle.Click += new System.EventHandler(this.BtnEkle_Click);
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(324, 25);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(321, 170);
+            this.dataGridView1.Size = new System.Drawing.Size(526, 170);
             this.dataGridView1.TabIndex = 39;
             // 
             // TxtBrans
@@ -110,7 +113,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(668, 216);
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(862, 216);
             this.Controls.Add(this.BtnGuncelle);
             this.Controls.Add(this.BtnSil);
             this.Controls.Add(this.BtnEkle);
@@ -120,9 +124,12 @@
             this.Controls.Add(this.Txtid);
             this.Controls.Add(this.label10);
             this.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(5);
+            this.MaximizeBox = false;
             this.Name = "FrmBrans";
-            this.Text = "FrmBrans";
+            this.Text = "Brans Paneli";
+            this.Load += new System.EventHandler(this.FrmBrans_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
