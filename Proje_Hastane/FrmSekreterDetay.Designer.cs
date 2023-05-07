@@ -143,6 +143,7 @@
             this.BtnDuyuruOlustur.TabIndex = 1;
             this.BtnDuyuruOlustur.Text = "Oluştur";
             this.BtnDuyuruOlustur.UseVisualStyleBackColor = true;
+            this.BtnDuyuruOlustur.Click += new System.EventHandler(this.BtnDuyuruOlustur_Click);
             // 
             // RchDuyuru
             // 
@@ -193,6 +194,7 @@
             this.BtnKaydet.TabIndex = 2;
             this.BtnKaydet.Text = "Kaydet";
             this.BtnKaydet.UseVisualStyleBackColor = true;
+            this.BtnKaydet.Click += new System.EventHandler(this.BtnKaydet_Click);
             // 
             // ChkDurum
             // 
@@ -228,6 +230,7 @@
             this.CmbBrans.Name = "CmbBrans";
             this.CmbBrans.Size = new System.Drawing.Size(211, 31);
             this.CmbBrans.TabIndex = 14;
+            this.CmbBrans.SelectedIndexChanged += new System.EventHandler(this.CmbBrans_SelectedIndexChanged);
             // 
             // MskSaat
             // 
@@ -351,6 +354,7 @@
             // 
             // dataGridView3
             // 
+            this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView3.Location = new System.Drawing.Point(3, 27);
@@ -405,6 +409,7 @@
             this.BtnDoktorPanel.TabIndex = 2;
             this.BtnDoktorPanel.Text = "Doktor Paneli";
             this.BtnDoktorPanel.UseVisualStyleBackColor = true;
+            this.BtnDoktorPanel.Click += new System.EventHandler(this.BtnDoktorPanel_Click);
             // 
             // FrmSekreterDetay
             // 
