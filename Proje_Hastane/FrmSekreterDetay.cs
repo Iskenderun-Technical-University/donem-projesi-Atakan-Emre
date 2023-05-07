@@ -19,12 +19,14 @@ namespace Proje_Hastane
         }
 
         public string TCnumara;
+        
         sqlbaglantisi bgl = new sqlbaglantisi();
 
 
         private void FrmSekreterDetay_Load(object sender, EventArgs e)
         {
             LblTC.Text = TCnumara;
+            
             //Ad SoyAd Alma
             SqlCommand komut1 = new SqlCommand("Select SekreterAdSoyad From Tbl_Sekreter Where SekreterTC=@p1", bgl.baglanti());
             komut1.Parameters.AddWithValue("@p1", LblTC.Text);
@@ -112,6 +114,12 @@ namespace Proje_Hastane
         {
             FrmRandevuListesi frmrandevu = new FrmRandevuListesi();
             frmrandevu.Show();
+        }
+
+        private void BtnDuyurlar_Click(object sender, EventArgs e)
+        {
+            FrmDuyurular frmDuyurular = new FrmDuyurular();
+            frmDuyurular.Show();
         }
     }
 }

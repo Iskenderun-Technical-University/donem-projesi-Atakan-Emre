@@ -27,5 +27,16 @@ namespace Proje_Hastane
             da.Fill(dt);
             dataGridView1.DataSource = dt;
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+      
+        private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
