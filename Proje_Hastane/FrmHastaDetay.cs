@@ -131,10 +131,15 @@ namespace Proje_Hastane
 
         private void BtnCikis_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Uygulamadan çıkmak istediğinize emin misiniz?", "Çıkış", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
+            if (MessageBox.Show("Uygulamadan çıkmak istediğinize emin misiniz?", "Çıkış", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                Application.Exit();
+                foreach (Form form in Application.OpenForms)
+                {
+                    form.Hide(); // Tüm açık formların gizlenmesi
+                }
+                FrmGirisler frmAnaForm = new FrmGirisler(); // Ana formunuzun yeni bir örneğinin oluşturulması
+                frmAnaForm.Show(); // Yeni formun gösterilmesi
+                Application.Exit(); // Uygulamanın tamamen kapatılması
             }
         }
 
@@ -142,11 +147,7 @@ namespace Proje_Hastane
         {
             if (MessageBox.Show("Programdan çıkmak istediğinize emin misiniz?", "Çıkış", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                Environment.Exit(0);
-            }
-            else
-            {
-                e.Cancel = true;
+                Environment.Exit(0);//Uygulama Tamamen Kapanır
             }
         }
 
