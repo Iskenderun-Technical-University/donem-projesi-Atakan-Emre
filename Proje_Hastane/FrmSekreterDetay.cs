@@ -121,5 +121,35 @@ namespace Proje_Hastane
             FrmDuyurular frmDuyurular = new FrmDuyurular();
             frmDuyurular.Show();
         }
+
+        private void BtnGeri_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmGirisler frmGirisler = new FrmGirisler();
+            frmGirisler.Show();
+        }
+
+        private void BtnCikis_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Uygulamadan çıkmak istediğinize emin misiniz?", "Çıkış", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                foreach (Form form in Application.OpenForms)
+                {
+                    form.Hide(); // Tüm açık formların gizlenmesi
+                }
+                FrmGirisler frmAnaForm = new FrmGirisler(); // Ana formunuzun yeni bir örneğinin oluşturulması
+                frmAnaForm.Show(); // Yeni formun gösterilmesi
+                Application.Exit(); // Uygulamanın tamamen kapatılması
+            }
+
+        }
+
+        private void FrmSekreterDetay_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Programdan çıkmak istediğinize emin misiniz?", "Çıkış", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Environment.Exit(0);//Uygulama Tamamen Kapanır
+            }
+        }
     }
 }

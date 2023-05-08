@@ -59,10 +59,12 @@
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.BtnDuyurlar = new System.Windows.Forms.Button();
             this.BtnListe = new System.Windows.Forms.Button();
             this.BtnBransPanel = new System.Windows.Forms.Button();
             this.BtnDoktorPanel = new System.Windows.Forms.Button();
-            this.BtnDuyurlar = new System.Windows.Forms.Button();
+            this.BtnCikis = new System.Windows.Forms.Button();
+            this.BtnGeri = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -155,6 +157,8 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.BtnGeri);
+            this.groupBox3.Controls.Add(this.BtnCikis);
             this.groupBox3.Controls.Add(this.BtnKaydet);
             this.groupBox3.Controls.Add(this.ChkDurum);
             this.groupBox3.Controls.Add(this.MskTC);
@@ -374,6 +378,16 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Hızlı Erişim";
             // 
+            // BtnDuyurlar
+            // 
+            this.BtnDuyurlar.Location = new System.Drawing.Point(437, 35);
+            this.BtnDuyurlar.Name = "BtnDuyurlar";
+            this.BtnDuyurlar.Size = new System.Drawing.Size(139, 49);
+            this.BtnDuyurlar.TabIndex = 5;
+            this.BtnDuyurlar.Text = "Duyurular";
+            this.BtnDuyurlar.UseVisualStyleBackColor = true;
+            this.BtnDuyurlar.Click += new System.EventHandler(this.BtnDuyurlar_Click);
+            // 
             // BtnListe
             // 
             this.BtnListe.Location = new System.Drawing.Point(288, 35);
@@ -404,15 +418,25 @@
             this.BtnDoktorPanel.UseVisualStyleBackColor = true;
             this.BtnDoktorPanel.Click += new System.EventHandler(this.BtnDoktorPanel_Click);
             // 
-            // BtnDuyurlar
+            // BtnCikis
             // 
-            this.BtnDuyurlar.Location = new System.Drawing.Point(437, 35);
-            this.BtnDuyurlar.Name = "BtnDuyurlar";
-            this.BtnDuyurlar.Size = new System.Drawing.Size(139, 49);
-            this.BtnDuyurlar.TabIndex = 5;
-            this.BtnDuyurlar.Text = "Duyurular";
-            this.BtnDuyurlar.UseVisualStyleBackColor = true;
-            this.BtnDuyurlar.Click += new System.EventHandler(this.BtnDuyurlar_Click);
+            this.BtnCikis.Location = new System.Drawing.Point(195, 355);
+            this.BtnCikis.Name = "BtnCikis";
+            this.BtnCikis.Size = new System.Drawing.Size(105, 37);
+            this.BtnCikis.TabIndex = 18;
+            this.BtnCikis.Text = "Çıkış";
+            this.BtnCikis.UseVisualStyleBackColor = true;
+            this.BtnCikis.Click += new System.EventHandler(this.BtnCikis_Click);
+            // 
+            // BtnGeri
+            // 
+            this.BtnGeri.Location = new System.Drawing.Point(89, 355);
+            this.BtnGeri.Name = "BtnGeri";
+            this.BtnGeri.Size = new System.Drawing.Size(100, 37);
+            this.BtnGeri.TabIndex = 19;
+            this.BtnGeri.Text = "Geri";
+            this.BtnGeri.UseVisualStyleBackColor = true;
+            this.BtnGeri.Click += new System.EventHandler(this.BtnGeri_Click);
             // 
             // FrmSekreterDetay
             // 
@@ -432,6 +456,7 @@
             this.MaximizeBox = false;
             this.Name = "FrmSekreterDetay";
             this.Text = "Sekreter Detay";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmSekreterDetay_FormClosing);
             this.Load += new System.EventHandler(this.FrmSekreterDetay_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -485,5 +510,7 @@
         private System.Windows.Forms.Button BtnBransPanel;
         private System.Windows.Forms.Button BtnDoktorPanel;
         private System.Windows.Forms.Button BtnDuyurlar;
+        private System.Windows.Forms.Button BtnGeri;
+        private System.Windows.Forms.Button BtnCikis;
     }
 }
