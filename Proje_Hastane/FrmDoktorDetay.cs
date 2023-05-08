@@ -59,15 +59,45 @@ namespace Proje_Hastane
             fr.Show();
         }
 
-        private void BtnCıkıs_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+       
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int secilen = dataGridView1.SelectedCells[0].RowIndex;
             RcSikayet.Text = dataGridView1.Rows[secilen].Cells[7].Value.ToString();
         }
+
+        private void BtnGeri_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmGirisler frmGirisler = new FrmGirisler();
+            frmGirisler.Show();
+        }
+
+        private void FrmDoktorDetay_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Programdan çıkmak istediğinize emin misiniz?", "Çıkış", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Environment.Exit(0);//Uygulama Tamamen Kapanır
+            }
+        }
+
+        private void BtnCıkıs_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Uygulamadan çıkmak istediğinize emin misiniz?", "Çıkış", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                foreach (Form form in Application.OpenForms)
+                {
+                    form.Hide(); // Tüm açık formların gizlenmesi
+                }
+                FrmGirisler frmAnaForm = new FrmGirisler(); // Ana formunuzun yeni bir örneğinin oluşturulması
+                frmAnaForm.Show(); // Yeni formun gösterilmesi
+                Application.Exit(); // Uygulamanın tamamen kapatılması
+            }
+        }
+
+
+
+
     }
 }

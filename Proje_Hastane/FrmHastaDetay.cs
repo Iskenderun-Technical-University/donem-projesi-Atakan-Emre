@@ -121,5 +121,35 @@ namespace Proje_Hastane
             int secilen = dataGridView2.SelectedCells[0].RowIndex;
             Txtid.Text= dataGridView2.Rows[secilen].Cells[0].Value.ToString();
         }
+
+        private void BtnGeri_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmGirisler frmGirisler = new FrmGirisler();    
+            frmGirisler.Show();
+        }
+
+        private void BtnCikis_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Uygulamadan çıkmak istediğinize emin misiniz?", "Çıkış", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void FrmHastaDetay_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Programdan çıkmak istediğinize emin misiniz?", "Çıkış", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Environment.Exit(0);
+            }
+            else
+            {
+                e.Cancel = true;
+            }
+        }
+
+
     }
 }

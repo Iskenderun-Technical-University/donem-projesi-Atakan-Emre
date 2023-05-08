@@ -36,6 +36,8 @@
             this.tc = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.BtnGeri = new System.Windows.Forms.Button();
+            this.BtnCikis = new System.Windows.Forms.Button();
             this.Txtid = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.LnkBilgiDuzenle = new System.Windows.Forms.LinkLabel();
@@ -112,6 +114,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.BtnGeri);
+            this.groupBox2.Controls.Add(this.BtnCikis);
             this.groupBox2.Controls.Add(this.Txtid);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.LnkBilgiDuzenle);
@@ -130,18 +134,38 @@
             this.groupBox2.Text = "Randevu Paneli";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
+            // BtnGeri
+            // 
+            this.BtnGeri.Location = new System.Drawing.Point(80, 315);
+            this.BtnGeri.Name = "BtnGeri";
+            this.BtnGeri.Size = new System.Drawing.Size(124, 44);
+            this.BtnGeri.TabIndex = 11;
+            this.BtnGeri.Text = "Geri";
+            this.BtnGeri.UseVisualStyleBackColor = true;
+            this.BtnGeri.Click += new System.EventHandler(this.BtnGeri_Click);
+            // 
+            // BtnCikis
+            // 
+            this.BtnCikis.Location = new System.Drawing.Point(210, 315);
+            this.BtnCikis.Name = "BtnCikis";
+            this.BtnCikis.Size = new System.Drawing.Size(124, 44);
+            this.BtnCikis.TabIndex = 10;
+            this.BtnCikis.Text = "Çıkış";
+            this.BtnCikis.UseVisualStyleBackColor = true;
+            this.BtnCikis.Click += new System.EventHandler(this.BtnCikis_Click);
+            // 
             // Txtid
             // 
             this.Txtid.Enabled = false;
-            this.Txtid.Location = new System.Drawing.Point(91, 30);
+            this.Txtid.Location = new System.Drawing.Point(80, 30);
             this.Txtid.Name = "Txtid";
-            this.Txtid.Size = new System.Drawing.Size(237, 31);
+            this.Txtid.Size = new System.Drawing.Size(254, 31);
             this.Txtid.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(52, 38);
+            this.label2.Location = new System.Drawing.Point(48, 38);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(29, 23);
             this.label2.TabIndex = 9;
@@ -150,7 +174,7 @@
             // LnkBilgiDuzenle
             // 
             this.LnkBilgiDuzenle.AutoSize = true;
-            this.LnkBilgiDuzenle.Location = new System.Drawing.Point(12, 358);
+            this.LnkBilgiDuzenle.Location = new System.Drawing.Point(5, 361);
             this.LnkBilgiDuzenle.Name = "LnkBilgiDuzenle";
             this.LnkBilgiDuzenle.Size = new System.Drawing.Size(147, 23);
             this.LnkBilgiDuzenle.TabIndex = 8;
@@ -160,9 +184,9 @@
             // 
             // BtnRandevuAl
             // 
-            this.BtnRandevuAl.Location = new System.Drawing.Point(91, 290);
+            this.BtnRandevuAl.Location = new System.Drawing.Point(80, 265);
             this.BtnRandevuAl.Name = "BtnRandevuAl";
-            this.BtnRandevuAl.Size = new System.Drawing.Size(237, 44);
+            this.BtnRandevuAl.Size = new System.Drawing.Size(254, 44);
             this.BtnRandevuAl.TabIndex = 4;
             this.BtnRandevuAl.Text = "Randevu Al";
             this.BtnRandevuAl.UseVisualStyleBackColor = true;
@@ -171,7 +195,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(15, 127);
+            this.label5.Location = new System.Drawing.Point(7, 112);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(70, 23);
             this.label5.TabIndex = 5;
@@ -180,7 +204,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(13, 169);
+            this.label6.Location = new System.Drawing.Point(5, 147);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(72, 23);
             this.label6.TabIndex = 6;
@@ -189,33 +213,33 @@
             // CmbDoktor
             // 
             this.CmbDoktor.FormattingEnabled = true;
-            this.CmbDoktor.Location = new System.Drawing.Point(91, 119);
+            this.CmbDoktor.Location = new System.Drawing.Point(80, 104);
             this.CmbDoktor.Name = "CmbDoktor";
-            this.CmbDoktor.Size = new System.Drawing.Size(237, 31);
+            this.CmbDoktor.Size = new System.Drawing.Size(254, 31);
             this.CmbDoktor.TabIndex = 3;
             this.CmbDoktor.SelectedIndexChanged += new System.EventHandler(this.CmbDoktor_SelectedIndexChanged);
             // 
             // RchSikayet
             // 
-            this.RchSikayet.Location = new System.Drawing.Point(91, 169);
+            this.RchSikayet.Location = new System.Drawing.Point(80, 141);
             this.RchSikayet.Name = "RchSikayet";
-            this.RchSikayet.Size = new System.Drawing.Size(237, 115);
+            this.RchSikayet.Size = new System.Drawing.Size(254, 118);
             this.RchSikayet.TabIndex = 4;
             this.RchSikayet.Text = "";
             // 
             // CmbBrans
             // 
             this.CmbBrans.FormattingEnabled = true;
-            this.CmbBrans.Location = new System.Drawing.Point(91, 76);
+            this.CmbBrans.Location = new System.Drawing.Point(80, 67);
             this.CmbBrans.Name = "CmbBrans";
-            this.CmbBrans.Size = new System.Drawing.Size(237, 31);
+            this.CmbBrans.Size = new System.Drawing.Size(254, 31);
             this.CmbBrans.TabIndex = 2;
             this.CmbBrans.SelectedIndexChanged += new System.EventHandler(this.CmbBrans_SelectedIndexChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(22, 84);
+            this.label4.Location = new System.Drawing.Point(18, 75);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(59, 23);
             this.label4.TabIndex = 2;
@@ -276,6 +300,7 @@
             this.MaximizeBox = false;
             this.Name = "FrmHastaDetay";
             this.Text = "Hasta Detay";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmHastaDetay_FormClosing);
             this.Load += new System.EventHandler(this.FrmHastaDetay_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -312,5 +337,7 @@
         private System.Windows.Forms.LinkLabel LnkBilgiDuzenle;
         private System.Windows.Forms.TextBox Txtid;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button BtnGeri;
+        private System.Windows.Forms.Button BtnCikis;
     }
 }
