@@ -35,13 +35,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.BtnGeri = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // BtnGirisYap
             // 
-            this.BtnGirisYap.Location = new System.Drawing.Point(155, 207);
+            this.BtnGirisYap.Location = new System.Drawing.Point(165, 207);
             this.BtnGirisYap.Name = "BtnGirisYap";
-            this.BtnGirisYap.Size = new System.Drawing.Size(170, 42);
+            this.BtnGirisYap.Size = new System.Drawing.Size(202, 42);
             this.BtnGirisYap.TabIndex = 13;
             this.BtnGirisYap.Text = "Giriş Yap";
             this.BtnGirisYap.UseVisualStyleBackColor = true;
@@ -49,18 +50,18 @@
             // 
             // MskTC
             // 
-            this.MskTC.Location = new System.Drawing.Point(155, 102);
+            this.MskTC.Location = new System.Drawing.Point(165, 102);
             this.MskTC.Mask = "00000000000";
             this.MskTC.Name = "MskTC";
-            this.MskTC.Size = new System.Drawing.Size(170, 31);
+            this.MskTC.Size = new System.Drawing.Size(202, 31);
             this.MskTC.TabIndex = 1;
             this.MskTC.ValidatingType = typeof(int);
             // 
             // TxtSifre
             // 
-            this.TxtSifre.Location = new System.Drawing.Point(155, 154);
+            this.TxtSifre.Location = new System.Drawing.Point(165, 154);
             this.TxtSifre.Name = "TxtSifre";
-            this.TxtSifre.Size = new System.Drawing.Size(170, 31);
+            this.TxtSifre.Size = new System.Drawing.Size(202, 31);
             this.TxtSifre.TabIndex = 2;
             // 
             // label3
@@ -94,6 +95,16 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "Doktor Giriş Paneli";
             // 
+            // BtnGeri
+            // 
+            this.BtnGeri.Location = new System.Drawing.Point(23, 207);
+            this.BtnGeri.Name = "BtnGeri";
+            this.BtnGeri.Size = new System.Drawing.Size(132, 42);
+            this.BtnGeri.TabIndex = 14;
+            this.BtnGeri.Text = "Geri";
+            this.BtnGeri.UseVisualStyleBackColor = true;
+            this.BtnGeri.Click += new System.EventHandler(this.BtnGeri_Click);
+            // 
             // FrmDoktorGiris
             // 
             this.AcceptButton = this.BtnGirisYap;
@@ -101,6 +112,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(400, 278);
+            this.Controls.Add(this.BtnGeri);
             this.Controls.Add(this.BtnGirisYap);
             this.Controls.Add(this.MskTC);
             this.Controls.Add(this.TxtSifre);
@@ -113,6 +125,7 @@
             this.MaximizeBox = false;
             this.Name = "FrmDoktorGiris";
             this.Text = "Doktor Giriş";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmDoktorGiris_FormClosing);
             this.Load += new System.EventHandler(this.FrmDoktorGiris_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -127,5 +140,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button BtnGeri;
     }
 }
