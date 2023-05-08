@@ -36,7 +36,7 @@
             this.MskTC = new System.Windows.Forms.MaskedTextBox();
             this.LnkUyeOl = new System.Windows.Forms.LinkLabel();
             this.BtnGirisYap = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.BtnGeri = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -94,10 +94,10 @@
             this.LnkUyeOl.AutoSize = true;
             this.LnkUyeOl.Location = new System.Drawing.Point(160, 228);
             this.LnkUyeOl.Name = "LnkUyeOl";
-            this.LnkUyeOl.Size = new System.Drawing.Size(62, 23);
+            this.LnkUyeOl.Size = new System.Drawing.Size(122, 23);
             this.LnkUyeOl.TabIndex = 5;
             this.LnkUyeOl.TabStop = true;
-            this.LnkUyeOl.Text = "Üye Ol";
+            this.LnkUyeOl.Text = "Hasta Kayıt Ol";
             this.LnkUyeOl.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LnkUyeOl_LinkClicked);
             // 
             // BtnGirisYap
@@ -111,16 +111,16 @@
             this.BtnGirisYap.UseVisualStyleBackColor = true;
             this.BtnGirisYap.Click += new System.EventHandler(this.BtnGirisYap_Click);
             // 
-            // button1
+            // BtnGeri
             // 
-            this.button1.Location = new System.Drawing.Point(38, 271);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(109, 51);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Geri";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.BtnGeri.Location = new System.Drawing.Point(38, 271);
+            this.BtnGeri.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BtnGeri.Name = "BtnGeri";
+            this.BtnGeri.Size = new System.Drawing.Size(109, 51);
+            this.BtnGeri.TabIndex = 7;
+            this.BtnGeri.Text = "Geri";
+            this.BtnGeri.UseVisualStyleBackColor = true;
+            this.BtnGeri.Click += new System.EventHandler(this.BtnGeri_Click);
             // 
             // FrmHastaGiris
             // 
@@ -129,7 +129,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(407, 357);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.BtnGeri);
             this.Controls.Add(this.BtnGirisYap);
             this.Controls.Add(this.LnkUyeOl);
             this.Controls.Add(this.MskTC);
@@ -143,6 +143,7 @@
             this.MaximizeBox = false;
             this.Name = "FrmHastaGiris";
             this.Text = "Hasta Girişi";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmHastaGiris_FormClosing);
             this.Load += new System.EventHandler(this.FrmHastaGiris_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -158,6 +159,6 @@
         private System.Windows.Forms.MaskedTextBox MskTC;
         private System.Windows.Forms.LinkLabel LnkUyeOl;
         private System.Windows.Forms.Button BtnGirisYap;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtnGeri;
     }
 }

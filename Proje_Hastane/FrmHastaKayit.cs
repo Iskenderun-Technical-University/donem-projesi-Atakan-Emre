@@ -34,9 +34,14 @@ namespace Proje_Hastane
             komut.ExecuteNonQuery();
             bgl.baglanti().Close();
             MessageBox.Show("Kaydınız Gerçekleşmiştir Şifreniz: " + TxtSifre.Text, "Bilgi", MessageBoxButtons.OK,MessageBoxIcon.Information );
+            this.Close(); // Formun kapanması
 
 
 
+        }
+
+        private void FrmHastaKayit_Load(object sender, EventArgs e)
+        {
 
         }
     }
