@@ -29,13 +29,17 @@ Bu proje C# programlama dili kullanarak bir hastane otomasyon sistemi oluşturma
  
 Bu hastane otomasyon sistemi projesi için aşağıdaki tabloların kullanılması önerilir:
 
-1. Hasta Tablosu: Bu tablo, hastaların kişisel bilgilerini içerir. Bu bilgiler arasında ad, soyad, doğum tarihi, cinsiyet, telefon numarası, adres gibi bilgiler yer alabilir.
+1. Hasta Tablosu (Tbl_Hastalar) : Bu tablo, hastaların kişisel bilgilerini içerir. Bu bilgiler arasında ad, soyad, doğum tarihi, cinsiyet, telefon numarası, adres gibi bilgiler yer alabilir.
 
-2. Doktor Tablosu: Bu tablo, hastanede çalışan doktorların bilgilerini içerir. Bu bilgiler arasında doktorun adı, soyadı, uzmanlık alanı, çalıştığı bölüm, telefon numarası, adres gibi bilgiler yer alabilir.
+2. Doktor Tablosu (Tbl_Doktorlar) : Bu tablo, hastanede çalışan doktorların bilgilerini içerir. Bu bilgiler arasında doktorun adı, soyadı, uzmanlık alanı, çalıştığı bölüm, telefon numarası, adres gibi bilgiler yer alabilir.
 
-3. Randevu Tablosu: Bu tablo, hastaların doktorlarla randevu alması için kullanılır. Bu tablo, randevu tarihleri, saatleri, doktorun adı, hastanın adı gibi bilgileri içerebilir.
+3. Randevu Tablosu (Tbl_Randevular) : Bu tablo, hastaların doktorlarla randevu alması için kullanılır. Bu tablo, randevu tarihleri, saatleri, doktorun adı, hastanın adı gibi bilgileri içerebilir.
 
-4. Tıbbi Kayıt Tablosu: Bu tablo, hastaların tıbbi kayıtlarını içerir. Bu bilgiler arasında hastanın tıbbi geçmişi, tedavi geçmişi, ilaç kullanımı, laboratuvar sonuçları gibi bilgiler yer alabilir.
+4. Branslar Tablosu (Tbl_Branslar) : Bu tablo, hastanedeki branşların bilgilerini içerir. Bu bilgiler arasında branş adı, branşa ait doktor sayısı gibi bilgiler yer alabilir.
+
+5. Duyuru Tablosu (Tbl_Duyurular) : Bu tablo, hastanenin duyurularını içerir. Bu bilgiler arasında duyuru metni, duyuru tarihi gibi bilgiler yer alabilir.
+
+6. Sekreter Tablosu (Tbl_Sekreterler) : Bu tablo, hastanenin sekreterlerinin bilgilerini içerir. Bu bilgiler arasında sekreterin adı, soyadı, telefon numarası, adres gibi bilgiler yer alabilir. Sekreterler, randevu alımı, hastaların kaydı, doktorların programı gibi işlemleri yönetirler.
 
 Bu tabloların yanı sıra, kullanıcı hesapları için bir kullanıcı tablosu da oluşturulabilir. Bu tablo, kullanıcı adları, şifreler, roller gibi bilgileri içerebilir ve sisteme giriş yapan kullanıcıların kimlik doğrulama işlemleri için kullanılabilir.
 
@@ -62,8 +66,8 @@ Bu proje için aşağıdaki gereksinimlere ihtiyaç duyulmaktadır:
 ## Kurulum
 
 1. Bu GitHub deposunu klonlayın: `git clone https://github.com/Iskenderun-Technical-University/donem-projesi-Atakan-Emre.git`
-2. Visual Studio'da `HastaneOtomasyonu.sln` dosyasını açın.
-3. Proje içindeki `HastaneOtomasyonu.bak` dosyasını SQL Server'a geri yükleyin.
+2. Visual Studio'da `Proje_Hastane.sln` dosyasını açın.
+3. Proje içindeki `Proje_Hastane.bak` dosyasını SQL Server'a geri yükleyin.
 4. `Web.config` dosyasını açın ve `connectionString` bölümünü kendi veritabanı bağlantı bilgilerinizle güncelleyin.
 5. Proje başlatın ve kullanmaya başlayın!
 
