@@ -41,5 +41,33 @@ namespace Proje_Hastane
 
             bgl.baglanti().Close();
         }
+
+        private void BtnGeri_Click(object sender, EventArgs e)
+        {
+
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form is FrmGirisler) // Ana formunuzun adı neyse o yazılabilir
+                {
+                    form.Show(); // Ana formun gösterilmesi
+                    break;
+                }
+            }
+            this.Hide(); // Mevcut formun gizlenmesi
+        }
+
+        private void FrmSekreterGiris_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Programdan çıkmak istediğinize emin misiniz?", "Çıkış", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                Environment.Exit(0); // Programın tamamen kapatılması
+            }
+            else
+            {
+                e.Cancel = true; // Formun kapanmasının engellenmesi
+            }
+        }
     }
 }

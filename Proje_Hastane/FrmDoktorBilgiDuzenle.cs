@@ -53,6 +53,7 @@ namespace Proje_Hastane
             komut.ExecuteNonQuery();
             bgl.baglanti().Close();
             MessageBox.Show("Kayıt Güncellendi");
+            this.Close();
 
         }
     }

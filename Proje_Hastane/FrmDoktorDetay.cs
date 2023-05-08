@@ -41,9 +41,6 @@ namespace Proje_Hastane
             da.Fill(dt);
             dataGridView1.DataSource = dt;
 
-
-
-
         }
 
         private void BtnGuncelle_Click(object sender, EventArgs e)
@@ -96,8 +93,12 @@ namespace Proje_Hastane
             }
         }
 
-
-
-
+        private void BtnGüncelle_Click(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter("Select * From Tbl_Randevular where RandevuDoktor='" + LblAdSıyad.Text + "'", bgl.baglanti());
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+        }
     }
 }
