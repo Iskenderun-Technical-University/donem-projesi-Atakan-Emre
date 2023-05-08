@@ -21,16 +21,6 @@ namespace Proje_Hastane
         public string tcno;
         sqlbaglantisi bgl = new sqlbaglantisi();
 
-        private void tc_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
-        }
-
         private void FrmHastaDetay_Load(object sender, EventArgs e)
         {
             //Ad Soyad verilerini almak için
@@ -105,15 +95,39 @@ namespace Proje_Hastane
 
         private void BtnRandevuAl_Click(object sender, EventArgs e)
         {
-            SqlCommand komut = new SqlCommand("Update Tbl_Randevular Set RandevuDurum=1,HastaTc=@p1,HastaSikayet=@p2 Where Randevuid=@p3",bgl.baglanti());
+            // Randevu bilgilerini güncellemek için SQL sorgusu hazırlanıyor
+            SqlCommand komut = new SqlCommand("Update Tbl_Randevular Set RandevuDurum=1,HastaTc=@p1,HastaSikayet=@p2 Where Randevuid=@p3", bgl.baglanti());
+            // Parametreler atanıyor
             komut.Parameters.AddWithValue("@p1", LblTC.Text);
             komut.Parameters.AddWithValue("@p2", RchSikayet.Text);
             komut.Parameters.AddWithValue("@p3", Txtid.Text);
+            // Sorgu çalıştırılıyor
             komut.ExecuteNonQuery();
+            // Veritabanı bağlantısı kapatılıyor
             bgl.baglanti().Close();
-            MessageBox.Show("Randevu Alındı.","Uyarı",MessageBoxButtons.OK,MessageBoxIcon.Warning);
 
+            // Bilgilendirme mesajı gösteriliyor
+            MessageBox.Show("Randevu Alındı.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
+            // Aktif Randevular
+            // Yeni bir DataTable oluşturuluyor
+            DataTable dtAktifRandevu = new DataTable();
+            // Veritabanından aktif randevuların bilgilerini getiren SqlDataAdapter hazırlanıyor
+            SqlDataAdapter daAktifRandevu = new SqlDataAdapter("Select * From Tbl_Randevular where HastaTC=" + tcno + " and RandevuDurum=0", bgl.baglanti());
+            // Veriler DataTable'a dolduruluyor
+            daAktifRandevu.Fill(dtAktifRandevu);
+            // DataGridView2'nin veri kaynağı olarak DataTable atanıyor
+            dataGridView2.DataSource = dtAktifRandevu;
+
+            // Geçmiş Randevular
+            // Yeni bir DataTable oluşturuluyor
+            DataTable dtGecmisRandevu = new DataTable();
+            // Veritabanından geçmiş randevuların bilgilerini getiren SqlDataAdapter hazırlanıyor
+            SqlDataAdapter daGecmisRandevu = new SqlDataAdapter("Select * From Tbl_Randevular where HastaTC=" + tcno + " and RandevuDurum=1", bgl.baglanti());
+            // Veriler DataTable'a dolduruluyor
+            daGecmisRandevu.Fill(dtGecmisRandevu);
+            // DataGridView1'in veri kaynağı olarak DataTable atanıyor
+            dataGridView1.DataSource = dtGecmisRandevu;
         }
 
         private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)

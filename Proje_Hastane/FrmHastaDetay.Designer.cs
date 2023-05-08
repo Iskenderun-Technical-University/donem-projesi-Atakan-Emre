@@ -110,7 +110,7 @@
             this.tc.Size = new System.Drawing.Size(68, 23);
             this.tc.TabIndex = 0;
             this.tc.Text = "TC NO:";
-            this.tc.Click += new System.EventHandler(this.tc_Click);
+//            this.tc.Click += new System.EventHandler(this.tc_Click);
             // 
             // groupBox2
             // 
@@ -132,7 +132,7 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Randevu Paneli";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+//            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // BtnGeri
             // 
